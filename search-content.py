@@ -1,12 +1,18 @@
+import os
+from dotenv import load_dotenv
 import asyncio
 from twikit import Client
 
 client = Client('en-US')
 
 async def main():
+    load_dotenv()
     # 使用字典设置 Cookies
     client.set_cookies({
-        
+        'auth_token': os.getenv('TWITTER_AUTH_TOKEN'),
+        'ct0': os.getenv('TWITTER_CT0'),
+        'twid': os.getenv('TWITTER_TWID'), # 如果有的话
+        'kdt': os.getenv('TWITTER_KDT')
     })
     
     # 验证是否成功加载
