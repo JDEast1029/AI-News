@@ -6,10 +6,7 @@ client = Client('en-US')
 async def main():
     # 使用字典设置 Cookies
     client.set_cookies({
-        'auth_token': 'a415a5e51805c69cc4b05507e4110b8a4f7853bf',
-        'ct0': '57385f6fcb89235e9d8923c9ce6c4d53c6dcd59833bc9978d57552b6331544a86f56b10ead36eb65d672d0966405b8a2ff9341deb90e56a2e118b48f81515722b311ae9e6fadb782244f090c813d3cba',
-        'twid': 'u%3D1991373083178070019', # 如果有的话
-        'kdt': 'E4k5bpe2qoqHPbKoN09q5LB8jSeLQCEtyCXhBbVZ'
+       
     })
     
     # 验证是否成功加载
